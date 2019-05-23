@@ -2,7 +2,7 @@
 <!--just open this on the apache server and it will display all Users-->
 
 <?php
-    $conn = new mysqli("contactmanager.chm9zgqp7oum.us-east-1.rds.amazonaws.com", "group15", "contact_group15", "contactmanager");
+    $conn = new mysqli("contactmanager.chm9zgqp7oum.us-east-1.rds.amazonaws.com", "group15", "contact_group15", "contactManager");
 
     if ($conn->connect_error){
         echo("Connection failed");
