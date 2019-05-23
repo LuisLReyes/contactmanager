@@ -5,6 +5,7 @@
     $conn = new mysqli("contactmanager.chm9zgqp7oum.us-east-1.rds.amazonaws.com", "group15", "contact_group15", "contactmanager");
 
     if ($conn->connect_error){
+        echo("Connection failed");
         die("Connection failed: " . $conn->connect_error);
     }
     echo "Connect successfully <br>";
