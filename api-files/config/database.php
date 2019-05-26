@@ -4,10 +4,10 @@
 
         //Database Parameters
         //Temporary, need real values
-        private $host = 'HOST_ADDRESS';
-        private $db_name = 'DATABASE_NAME';
-        private $username = 'USERNAME';
-        private $password = 'PASSWORD';
+        private $host = 'contactmanager.chm9zgqp7oum.us-east-1.rds.amazonaws.com';
+        private $db_name = 'contactManager';
+        private $username = 'group15';
+        private $password = 'contact_group15';
         private $conn;
 
         //Database Connection
