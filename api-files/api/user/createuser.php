@@ -6,7 +6,7 @@
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, X-Requested-With");
            
     include_once '../../config/database.php';
-    include_once '../../models/users.php';
+    include_once '../../models/user.php';
  
     // Instantiate DB & connect
     $database = new Database();
