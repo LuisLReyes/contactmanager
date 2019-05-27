@@ -5,9 +5,9 @@ class Users{
     //Connection instance
     private $connection;
     //Table name
-    private $table_name = "u";
+    private $table_name = "users";
     //Table columns
-     public $id;
+    public $id;
     public $first_name
     public $user_name;
     public $password;

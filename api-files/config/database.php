@@ -3,7 +3,6 @@
     class Database{
 
         //Database Parameters
-        //Temporary, need real values
         private $host = 'contactmanager.chm9zgqp7oum.us-east-1.rds.amazonaws.com';
         private $db_name = 'contactManager';
         private $username = 'group15';
