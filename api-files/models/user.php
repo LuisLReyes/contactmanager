@@ -8,7 +8,7 @@ class Users{
     private $table_name = "users";
     //Table columns
     public $id;
-    public $first_name
+    public $first_name;
     public $user_name;
     public $password;
     
