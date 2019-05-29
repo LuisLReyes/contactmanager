@@ -84,7 +84,7 @@ class Contact{
         $stmt = $this->connection->prepare($query);
         //Clean data
         //Clean data
-        $this->users_id = htmlspecialchars(strip_tags($this->users_id);
+        $this->users_id = htmlspecialchars(strip_tags($this->users_id));
         $this->first_name = htmlspecialchars(strip_tags($this->first_name));
         $this->last_name = htmlspecialchars(strip_tags($this->last_name));
         $this->phone_number = htmlspecialchars(strip_tags($this->phone_number));
