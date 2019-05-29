@@ -30,7 +30,7 @@ class Users{
         $stmt = $this->connection->prepare($query);
         //Clean data
         $this->first_name = htmlspecialchars(strip_tags($this->first_name));
-        $this->user_name = htmlspecialchars(strip_tags($this->user_name;
+        $this->user_name = htmlspecialchars(strip_tags($this->user_name));
         $this->password = htmlspecialchars(strip_tags($this->password));
         //Bind Data
         $stmt->bindParam(':first_name', $this->first_name);
