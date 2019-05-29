@@ -10,7 +10,7 @@
     }
     echo "Connect successfully <br>";
 
-    $sql = "SELECT first_name, user_name, id, password,  FROM users";
+    $sql = "SELECT first_name, user_name, id, password  FROM users";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
