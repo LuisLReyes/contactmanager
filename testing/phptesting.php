@@ -23,7 +23,7 @@
         echo "0 results";
     }
 
-    $sql = "SELECT first_name, last_name, id, users_id, phone_number, email, address  FROM users";
+    $sql = "SELECT first_name, last_name, id, users_id, phone_number, email, address  FROM contacts";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
