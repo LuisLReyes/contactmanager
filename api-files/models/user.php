@@ -35,8 +35,7 @@ class Users{
         //Bind Data
         $stmt->bindParam(':first_name', $this->first_name);
         $stmt->bindParam(':user_name', $this->user_name);
-        $stmt->bindParam(':password', $this->$password);        
-         
+        $stmt->bindParam(':password', $this->password);
         //Execute query
         if($stmt->execute()){
             return true;
