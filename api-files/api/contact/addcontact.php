@@ -17,7 +17,7 @@
     $data = json_decode(file_get_contents("php://input"));
     $contact->users_id = $data->users_id;
     $contact->first_name = $data->first_name;
-    $contact->last_name = $data->last_name
+    $contact->last_name = $data->last_name;
     $contact->phone_number = $data->phone_number;
     $contact->email = $data->email;
     $contact->address = $data->address;
