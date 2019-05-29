@@ -10,13 +10,13 @@
     }
     echo "Connect successfully <br>";
 
-    $sql = "SELECT FirstName, LastName, UserName, idUsers FROM Users";
+    $sql = "SELECT first_name, user_name, id, password,  FROM Users";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            echo "First Name: " . $row["FirstName"]. " Last Name: " . $row["LastName"]. " Username: " . $row["UserName"]. " userID: " . $row["idUsers"]."<br>";
+            echo "first_name: " . $row["first_name"]. " user_name: " . $row["user_name"]. " id: " . $row["id"]. " password: " . $row["password"]."<br>";
         }
     } 
     else {
