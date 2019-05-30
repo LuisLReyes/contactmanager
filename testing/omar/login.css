@@ -10,7 +10,7 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: blue;
+  background-color: #4d4d4d;
   background-image: url("websitebg.jpg");
 }
 h1 {
@@ -18,6 +18,7 @@ h1 {
   padding-top: 10px;
   padding-bottom: 50px;
   font-size: 35px;
+  color:  #f2f2f2;
 }
 
 .form-signin {
@@ -25,8 +26,8 @@ h1 {
   max-width: 400px;
   padding: 30px;
   margin: auto;
-  background-color: white;
-  border-radius: 5px;
+  background-color: #4d4d4d;
+  border-radius: 25px;
 }
 .form-signin .checkbox {
   font-weight: 400;
@@ -41,12 +42,26 @@ h1 {
 .form-signin .form-control:focus {
   z-index: 2;
 }
-.form-signin input[type="userid"] {
+.form-signin input[type="text"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  background-color: inherit;
+  border-color: #999999;
 }
 .form-signin input[type="password"] {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  background-color: inherit;
+  border-color: #999999;
+}
+.form-signin button[type="submit"] {
+  background-color: #6666ff;
+  border-color: #6666ff;
+}
+.sr-only + label{
+  color: white;
+}
+.modal-body{
+  background-color:;
 }
