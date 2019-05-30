@@ -1,5 +1,6 @@
+var userTest;
 $(function() {
-		console.log("ready");
+		console.log(userTest);
     $('#form-signin').validate({ // initialize the plugin
         rules: {
             inputUserId: {
