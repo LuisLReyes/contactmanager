@@ -34,6 +34,27 @@ function doLogin()
 
 function doCreate()
 {
-	document.getElementById("inputUserId").value = document.getElementById("signUpId").value;
-	document.getElementById("inputPassword").value = document.getElementById("signUpPassword").value;
+	//var uid = document.getElementById("inputUserId").value = document.getElementById("signUpId").value;
+	//var password = document.getElementById("inputPassword").value = document.getElementById("signUpPassword").value;
+	//var fname = document.getElementById("signUpName").value;
+	//var jsonPayload = '{"first_name" : "' + fname + '", "user_name" : "' + uid + '", "password" : "' + password + '"}';
+	var logindata = '{"first_name":"Luis", "user_name":"luislol","password":"password123"}';
+	logindata = JSON.stringify(logindata);
+	$.ajax
+	({
+		url:"https://contactmanager4331.herokuapp.com/api-files/api/user/createuser.php",
+		type: "POST",
+		contentType: 'application/json',
+		data: logindata,
+		success: function(result)
+		{
+			console.log("User creation success");
+			//doLogin();
+		},
+		error: function(xhr, resp, text)
+		{
+			console.log("User creation fail");
+			// TODO display an error message to user
+		}
+	})
 }
