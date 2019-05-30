@@ -49,6 +49,8 @@ function doCreate()
 		success: function(result)
 		{
 			console.log("User creation success");
+			console.log(logindata);
+			console.log(result);
 			//doLogin();
 		},
 		error: function(xhr, resp, text)
