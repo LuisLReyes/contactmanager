@@ -34,12 +34,14 @@ function doLogin()
 
 function doCreate()
 {
-	//var uid = document.getElementById("inputUserId").value = document.getElementById("signUpId").value;
-	//var password = document.getElementById("inputPassword").value = document.getElementById("signUpPassword").value;
-	//var fname = document.getElementById("signUpName").value;
-	//var jsonPayload = '{"first_name" : "' + fname + '", "user_name" : "' + uid + '", "password" : "' + password + '"}';
-	var logindata = {first_name: "Luis", user_name: "luislol",password: "password123"};
-	var sendJSON = JSON.stringify(logindata);
+	var uid = document.getElementById("inputUserId").value = document.getElementById("signUpId").value;
+	var password = document.getElementById("inputPassword").value = document.getElementById("signUpPassword").value;
+	var MD5 = new Hashes.MD5;
+	password = MD5.hex(password);
+	var fname = document.getElementById("signUpName").value;
+	var jsonPayload = {first_name : fname, user_name : uid, password : password};
+	//var logindata = {first_name: "Luis", user_name: "luislol",password: "password123"};
+	var sendJSON = JSON.stringify(jsonPayload);
 	$.ajax
 	({
 		url:"https://contactmanager4331.herokuapp.com/api-files/api/user/createuser.php",
