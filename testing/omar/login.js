@@ -1,5 +1,17 @@
 $(function() {
-    console.log( "ready!" );
+
+    $('#form-signin').validate({ // initialize the plugin
+        rules: {
+            inputUserId: {
+                required: true,
+            },
+            inputPassword: {
+                required: true,
+                minlength: 10
+            }
+        }
+    });
+
 });
 function doLogin()
 {
