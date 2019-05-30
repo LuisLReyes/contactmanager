@@ -38,17 +38,18 @@ function doCreate()
 	//var password = document.getElementById("inputPassword").value = document.getElementById("signUpPassword").value;
 	//var fname = document.getElementById("signUpName").value;
 	//var jsonPayload = '{"first_name" : "' + fname + '", "user_name" : "' + uid + '", "password" : "' + password + '"}';
-	var logindata = JSON.stringify({first_name:"Luis", user_name:"luislol",password:"password123"});
+	var logindata = {first_name: "Luis", user_name: "luislol",password: "password123"};
+	var sendJSON = JSON.stringify(logindata);
 	$.ajax
 	({
 		url:"https://contactmanager4331.herokuapp.com/api-files/api/user/createuser.php",
 		type: "POST",
 		contentType: 'application/json',
-		data: logindata,
+		data: sendJSON,
 		success: function(result)
 		{
 			console.log("User creation success");
-			console.log(logindata);
+			console.log(sendJSON);
 			console.log(result);
 			//doLogin();
 		},
