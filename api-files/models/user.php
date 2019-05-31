@@ -65,4 +65,36 @@ class Users{
     public function delete(){
         
     }
+    public function login(){
+        
+        //prepare query to login
+        $query = "SELECT id, user_name, password FROM " . $this->table.name . "WHERE user_name = :user_name LIMIT 0,1";
+        
+        // Prepare statement
+        $stmt = $this->connection->prepare($query);
+        // Clean data
+        $this->user_name = htmlspecialchars(strip_tags($this->user_name));
+        // Bind data
+        $stmt->bindParam(':user_name', $this->user_name);
+
+        // Execute statement
+        $stmt->execute();
+        // Store number of results
+        $num = $stmt->rowCount();
+
+        // Check that a user was found
+        if($num > 0){
+
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $this->id = $row['id'];
+            $this->user_name= $row['user_name'];
+            $this->password = $row['password'];
+            $this->first_name = $row['first_name'];
+
+            return true;
+        }
+
+        // Return false if no user is found
+        return false;
+    }
 }
