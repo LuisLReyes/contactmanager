@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -16,6 +19,9 @@
 
     </head>
     <body class="text-center">
+    <?php
+        echo "PHP is working correctly. Session ID:".$_SESSION["id"];
+        ?>
         <!--Begin page HTML here-->
         <form class="form-signin">
           <h1 class="mb-3 font-weight-normal">Contact Manager</h1>
