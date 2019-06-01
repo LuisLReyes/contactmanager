@@ -104,6 +104,14 @@ h5 {
 .form-signin ::placeholder {
   color: #a1a7af;
 }
+.form-signin :-ms-input-placeholder {
+  color: #a1a7af;
+}
+
+::-ms-input-placeholder {
+  color: #a1a7af;
+}
+
 .checkbox label {
   color: #e1e3e8;
 }
