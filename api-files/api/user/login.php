@@ -24,12 +24,14 @@
     if($user->login()){
         //password does match
         if($user->password == $temp){
+            http_response_code(200);
             echo json_encode(
                 array('message' => 'Login Successful')
             );
         }
         //password does not match
         else{
+            http_response_code(400);
             echo json_encode(
                 array('message' => 'Password does not match user')
             );

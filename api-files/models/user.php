@@ -45,8 +45,7 @@ class Users{
     }
     //Get user by ID
     public function read(){
-        $query = 'SELECT 
-        * FROM ' . $this->table_name . ' WHERE ' . $this->table_name .  '.id = ? LIMIT 0,1';
+        $query = 'SELECT * FROM ' . $this->table_name . ' WHERE ' . $this->table_name .  '.id = ? LIMIT 0,1';
         
         // Prepare statement
         $stmt = $this->connection->prepare($query);
