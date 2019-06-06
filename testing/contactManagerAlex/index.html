@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--The name of the tab in the browser-->
+        <title>Contact Manager</title>
+
+        <!--Meta Tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+        
+        <!--Bootstrap's CSS, make sure this is above all other stylesheets imported-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <!--Place your custom CSS import below this line-->
+        <link rel="stylesheet" href="contactsPage.css">
+                   
+    </head>
+    <body> 
+        <!--Begin page HTML here-->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+		  <a class="navbar-brand" href="#">	Hello, User!</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Logout</a>
+			  </li>
+			</ul>
+		  </div>
+		</nav>
+		
+        <div class="jumbotron jumbotron-fluid">
+		  <div class="container">
+			<h1 class="display-4">Fluid jumbotron</h1>
+			<p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+		  </div>
+		</div>
+		
+		<div class="row justify-content-center">
+			<div class="col-5">
+				<input class="form-control" type="search" placeholder="Search Contacts">
+			</div>
+			<div class="col-2">
+				<button class="btn btn-outline-success" type="submit">Search</button>
+				<button class="btn btn-primary my-2 my-sm-0" type="submit">Add Contact</button>
+			</div>
+
+		</div>
+		
+		<br>
+	
+		<div class="row justify-content-center">
+		  <div class="col-4">
+			<div class="list-group" id="list-tab" role="tablist">
+			  <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+			  <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
+			  <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
+			  <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+			</div>
+		  </div>
+		<div class="col-3">
+			<div class="tab-content" id="nav-tabContent">
+			  <div class="tab-pane fade" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+					<div>Name:</div>
+					<div>Email:</div>
+					<div>Phone Number:</div>
+					<div>Address:</div>
+					<br>
+					<div class="col justify-content-bottom">
+						<button type="button" class="btn btn-danger align-bottom float-right">Delete</button>
+						<button type="button" class="btn btn-secondary align-bottom float-right">Edit</button>
+					</div>
+				</div>
+			  <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+			  <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
+			  <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+			</div>
+		  </div>
+		 </div>
+		</div>
+
+        <!--Imports for Jquery, popper, and Bootstreap's custom javascript-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!--Place your custom JavaScript import below this line-->
+        <!--<script src="javascript/"></script>-->
+    </body>
+</html>
