@@ -67,14 +67,16 @@ class Users{
     public function login(){
         
         //prepare query to login
-        $query = "SELECT id, user_name, password FROM " . $this->table.name . "WHERE user_name = :user_name LIMIT 0,1";
+        $query = "SELECT id, user_name, password 
+        FROM " . $this->table.name . "
+        WHERE user_name = ? LIMIT 0,1";
         
         // Prepare statement
         $stmt = $this->connection->prepare($query);
         // Clean data
         $this->user_name = htmlspecialchars(strip_tags($this->user_name));
         // Bind data
-        $stmt->bindParam(':user_name', $this->user_name);
+        $stmt->bindParam(1, $this->user_name);
 
         // Execute statement
         $stmt->execute();
