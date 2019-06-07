@@ -15,3 +15,30 @@
     </body>
 </html>
 
+<script>
+
+var jsonPayload = {user_name : "mike", password : "mikepass"};
+jsonPayload = JSON.stringify(jsonPayload);
+
+$.ajax({
+    url: "https://contactmanager4331.herokuapp.com/api-files/api/user/login.php",
+    type : "POST",
+    contentType : 'application/json',
+    data : jsonPayload,
+    success : function(result){
+        console.log("User Logged in");
+        console.log(result);
+
+        //Change page if you want
+        //location = 'contacts.html';
+    },
+    error: function(xhr, resp, text){
+        // on error, log it
+        console.log("User not logged in");
+        console.log(xhr);
+        console.log(resp);
+        consold.log(test);
+    }
+});
+
+</script>
