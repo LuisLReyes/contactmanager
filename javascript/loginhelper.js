@@ -12,7 +12,7 @@ function signup(signupUsername, signupPassword, signupFirstName,){
         success : function(result){
             console.log("User Created");
             console.log(result);
-    
+
             //Login after creating user
             return login(signupUsername, signupPassword);
         },
@@ -40,9 +40,9 @@ function login(loginUsername,loginPassword){
         success : function(result){
             console.log("User Logged in");
             console.log(result);
-    
+
             //Change page if you want
-            location = 'contacts.html';
+            location = 'contact.html';
         },
         error: function(xhr, resp, text){
             // on error, log it
