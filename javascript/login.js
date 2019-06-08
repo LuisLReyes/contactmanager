@@ -15,6 +15,9 @@ $(function() {
 
 function doLogin()
 {
+
+	// create user field also populates these ids so they can always be used to start
+	// the function
 	var userid = document.getElementById("inputUserId").value;
 	var password = document.getElementById("inputPassword").value;
 
@@ -61,7 +64,7 @@ function doCreate()
 
 	// create object to hold all needed values to convert to JSON for creating user
 	var jsonPayload = {first_name : fname, user_name : uid, password : password};
-	var sendJSON = JSON.stringify(jsonPayload);
+	jsonPayload = JSON.stringify(jsonPayload);
 
 	// asynch call to create a new user field in the database
 	$.ajax
@@ -69,7 +72,7 @@ function doCreate()
 		url:"https://contactmanager4331.herokuapp.com/api-files/api/user/createuser.php",
 		type: "POST",
 		contentType: 'application/json',
-		data: sendJSON,
+		data: jsonPayload,
 		success: function(result)
 		{
 			console.log("User creation success");
