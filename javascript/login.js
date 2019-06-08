@@ -66,7 +66,7 @@ function doCreate()
 
 	// create object to hold all needed values to convert to JSON for creating user
 	var jsonPayload = {first_name : fname, user_name : uid, password : password};
-	jsonPayload = JSON.stringify(jsonPayload);
+	var jsonPayload = JSON.stringify(jsonPayload);
 
 	// asynch call to create a new user field in the database
 	$.ajax
@@ -78,7 +78,7 @@ function doCreate()
 		success: function(result)
 		{
 			console.log("User creation success");
-			console.log(sendJSON);
+			console.log(jsonPayload);
 			console.log(result);
 			doLogin();
 		},
