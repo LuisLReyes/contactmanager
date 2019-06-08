@@ -12,11 +12,21 @@
         <br>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="loginhelper.js"></script>
     </body>
 </html>
 
 <script>
+if(login("assdafd","asdfadsfads") == -1){
+    alert("login failed");
+}
 
+
+
+
+
+
+/*
 var jsonPayload = {user_name : "mike", password : "mikepass"};
 jsonPayload = JSON.stringify(jsonPayload);
 
@@ -39,6 +49,6 @@ $.ajax({
         console.log(resp);
         consold.log(test);
     }
-});
+});*/
 
 </script>
