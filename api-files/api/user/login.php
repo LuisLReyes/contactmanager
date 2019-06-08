@@ -24,12 +24,13 @@
     if($user->login()){
         //password does match
         if($user->password == $temp){
+            $_SESSION["id"] = $user->id;
             http_response_code(200);
             echo json_encode(
                 array('message' => 'Login Successful', 'id' => $user->id)
                 
             );
-            $_SESSION["id"] = $user->id;
+            
         }
         //password does not match
         else{
