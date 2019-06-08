@@ -47,7 +47,7 @@ function login(loginUsername,loginPassword){
             console.log("User not logged in");
             console.log(xhr);
             console.log(resp);
-            consold.log(test);
+            console.log(text);
             //return a failure
             return -1;
         }
