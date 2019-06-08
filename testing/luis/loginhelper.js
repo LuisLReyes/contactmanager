@@ -1,7 +1,9 @@
 
+//Call to create a new user
 function signup(signupUsername, signupPassword, signupFirstName,){
+    //Prepare data
     var jsonPayload = JSON.stringify({first_name: signupFirstName, user_name : signupUsername, password : signupPassword});
-
+    //Ajax call
     $.ajax({
         url: "https://contactmanager4331.herokuapp.com/api-files/api/user/createuser.php",
         type : "POST",
@@ -21,7 +23,7 @@ function signup(signupUsername, signupPassword, signupFirstName,){
             console.log(resp);
             consold.log(text);
             //Return a failure
-            return 0;
+            return xhr;
         }
     });
 }
@@ -49,7 +51,7 @@ function login(loginUsername,loginPassword){
             console.log(resp);
             console.log(text);
             //return a failure
-            return -1;
+            return xhr;
         }
     });
 }

@@ -17,9 +17,7 @@
 </html>
 
 <script>
-if(login("mike","mikepass") == -1){
-    alert("login failed");
-}
+temp = login("mike","mikepass");
 
 
 
