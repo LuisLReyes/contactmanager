@@ -21,7 +21,7 @@ function signup(signupUsername, signupPassword, signupFirstName,){
             console.log("User not logged in");
             console.log(xhr);
             console.log(resp);
-            consold.log(text);
+            console.log(text);
             //Return a failure
             return xhr;
         }

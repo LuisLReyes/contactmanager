@@ -1,5 +1,5 @@
 $(function() {
-    $('#form-signin').validate({ // initialize the plugin
+    $("#form-signin[name = 'login']").validate({ // initialize the plugin
         rules: {
             inputUserId: {
                 required: true,
@@ -8,7 +8,21 @@ $(function() {
                 required: true,
                 minlength: 10
             }
-        }
+
+        },
+       // Specify validation error messages
+    messages: {
+      inputPassword: {
+          required: "Please provide a password",
+          minlength: "Your password must be at least 10 characters long"
+      },
+      inputUserId: "Please enter a username"
+    },
+    // Make sure the form is submitted to the destination defined
+    // in the "action" attribute of the form when valid
+    submitHandler: function(form) {
+      form.submit();
+    }
     });
 
 });
