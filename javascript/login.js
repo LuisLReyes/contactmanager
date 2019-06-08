@@ -1,6 +1,4 @@
-var userTest;
 $(function() {
-		console.log(userTest);
     $('#form-signin').validate({ // initialize the plugin
         rules: {
             inputUserId: {
@@ -14,11 +12,40 @@ $(function() {
     });
 
 });
+
 function doLogin()
 {
-	var login = document.getElementById("inputUserId").value;
+	var userid = document.getElementById("inputUserId").value;
 	var password = document.getElementById("inputPassword").value;
-	document.getElementById("loginResult").innerHTML = "";
+
+	// hash the password using the imported git library
+	var MD5 = new Hashes.MD5;
+	password = MD5.hex(password);
+
+	var jsonPayload = {user_name : userid, password : password};
+	jsonPayload = JSON.stringify(jsonPayload);
+
+	$.ajax({
+	    url: "https://contactmanager4331.herokuapp.com/api-files/api/user/login.php",
+	    type : "POST",
+	    contentType : 'application/json',
+	    data : jsonPayload,
+	    success : function(result){
+	        console.log("User Logged in");
+	        console.log(result);
+
+	        //Change page if you want
+	        //location = 'contacts.html';
+	    },
+	    error: function(xhr, resp, text){
+	        // on error, log it
+	        console.log("User not logged in");
+	        console.log(xhr);
+	        console.log(resp);
+	        console.log(test);
+					document.getElementById("loginResult").innerHTML = "incorrect username/password combination";
+	    }
+	});
 
 }
 
@@ -26,12 +53,17 @@ function doCreate()
 {
 	var uid = document.getElementById("inputUserId").value = document.getElementById("signUpId").value;
 	var password = document.getElementById("inputPassword").value = document.getElementById("signUpPassword").value;
+
+	// hash the password using the imported git library
 	var MD5 = new Hashes.MD5;
 	password = MD5.hex(password);
 	var fname = document.getElementById("signUpName").value;
+
+	// create object to hold all needed values to convert to JSON for creating user
 	var jsonPayload = {first_name : fname, user_name : uid, password : password};
-	//var logindata = {first_name: "Luis", user_name: "luislol",password: "password123"};
 	var sendJSON = JSON.stringify(jsonPayload);
+
+	// asynch call to create a new user field in the database
 	$.ajax
 	({
 		url:"https://contactmanager4331.herokuapp.com/api-files/api/user/createuser.php",
@@ -43,7 +75,7 @@ function doCreate()
 			console.log("User creation success");
 			console.log(sendJSON);
 			console.log(result);
-			//doLogin();
+			doLogin();
 		},
 		error: function(xhr, resp, text)
 		{
