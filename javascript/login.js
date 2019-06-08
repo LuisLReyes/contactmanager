@@ -1,5 +1,5 @@
 $(function() {
-    $("#form-signin[name = 'login']").validate({ // initialize the plugin
+    $("form[name = 'login']").validate({ // initialize the plugin
         rules: {
             inputUserId: {
                 required: true,
