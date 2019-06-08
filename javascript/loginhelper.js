@@ -51,6 +51,7 @@ function login(loginUsername,loginPassword){
             console.log(resp);
             console.log(text);
             //return a failure
+            document.getElementById("loginResult").innerHTML = "incorrect username/password combination";
             return xhr;
         }
     });
