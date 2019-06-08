@@ -19,7 +19,9 @@ function doLogin()
 	// create user field also populates these ids so they can always be used to start
 	// the function
 	var userid = document.getElementById("inputUserId").value;
+	console.log(userid);
 	var password = document.getElementById("inputPassword").value;
+	console.log(password);
 
 	// hash the password using the imported git library
 	var MD5 = new Hashes.MD5;
