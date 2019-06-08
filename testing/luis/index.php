@@ -17,7 +17,7 @@
 </html>
 
 <script>
-if(login("assdafd","asdfadsfads") == -1){
+if(login("mike","mikepass") == -1){
     alert("login failed");
 }
 
