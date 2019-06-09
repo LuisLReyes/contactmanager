@@ -5,7 +5,6 @@ function fillContacts(userid){
 function addRow(){
  
 // Fix this
-$(this).attr("disabled", "disabled");
       var index = $("table tbody tr:last-child").index();
 	  var row = '<tr>' +
 	      '<td><input type="text" class="form-control" name="First Name" id="fname"></td>' +
