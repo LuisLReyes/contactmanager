@@ -14,18 +14,20 @@ function fillContacts(userid){
         '<td>' + action + '</td>' +
           '</tr>';
         $("table").append(row);		
-      $("table tbody tr").eq(index + 1).find(".add, .edit").toggle();
-          $('[data-toggle="tooltip"]').tooltip();
+      	$("table tbody tr").eq(index + 1).find(".add, .edit").toggle();
+        $('[data-toggle="tooltip"]').tooltip();
     });
 
-	$(document).on("click", ".add", function(){
-		var empty = false;
-		var input = $(this).parents("tr").find('input[type="text"]');
-        input.each(function(){
-			if(!$(this).val()){
-				$(this).addClass("error");
-				empty = true;
-			} else{
-                $(this).removeClass("error");
-            }
+	$(document).ready(function(){
+		$(document).on("click", ".add", function(){
+			var empty = false;
+			var input = $(this).parents("tr").find('input[type="text"]');
+		input.each(function(){
+				if(!$(this).val()){
+					$(this).addClass("error");
+					empty = true;
+				} else{
+			$(this).removeClass("error");
+		    }
 		});
+	});
