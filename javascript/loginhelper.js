@@ -42,7 +42,7 @@ function login(loginUsername,loginPassword){
             console.log(result);
             alert("Login Successful");
             //Change page if you want
-            //location = 'contact.html';
+            location = 'contact.html';
         },
         error: function(xhr, resp, text){
             // on error, log it
