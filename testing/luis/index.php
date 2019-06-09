@@ -13,12 +13,13 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="loginhelper.js"></script>
+        <script src="contacthelper.js"></script>
     </body>
 </html>
 
 <script>
-temp = login("mike","mikepass");
-
+//temp = login("mike","mikepass");
+getContacts("1");
 
 
 
