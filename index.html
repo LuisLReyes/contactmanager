@@ -17,7 +17,7 @@
     </head>
     <body class="text-center">
         <!--Begin page HTML here-->
-       <form class="form-signin" action="" onsubmit="doLogin()">
+       <form class="form-signin" onsubmit="doLogin(); return false">
           <h1 class="mb-3 font-weight-normal">Contact Manager</h1>
           <label for="inputUserId" class ="sr-only">User ID</label>
           <input type = "text" id ="inputUserId" class="form-control" placeholder="User ID">
@@ -31,7 +31,7 @@
           <a href="#" data-toggle="modal" data-target="#signUpPage" id="create">Create an account</a>
           <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
        </form>
-       <form class="form-create" action ="" onsubmit="doCreate()">
+       <form class="form-create" onsubmit="doCreate(); return false">
           <div class="modal fade" id="signUpPage" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
           aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
