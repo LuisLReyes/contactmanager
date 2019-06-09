@@ -16,8 +16,6 @@ $(this).attr("disabled", "disabled");
 	'<td>' + action + '</td>' +
 	  '</tr>';
 	$("table").append(row);		
-	$("table tbody tr").eq(index + 1).find(".add, .edit").toggle();
-	$('[data-toggle="tooltip"]').tooltip();
 	
 }
 
