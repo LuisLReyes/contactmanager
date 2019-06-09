@@ -110,3 +110,26 @@ function updateContact(contactToEdit){
         }
     });
 }
+
+function logout(){
+    //Call the API to wipe the session
+    $.ajax({
+        url: "https://contactmanager4331.herokuapp.com/api-files/api/system/logout.php",
+        type : "POST",
+        contentType : 'application/json',
+        success : function(result){
+            console.log("Logged out");            
+            //Logout
+            location = 'index.html';
+        },
+        error: function(xhr, resp, text){
+            // on error, log it
+            console.log("Failed to logout");
+            console.log(xhr);
+            console.log(resp);
+            consold.log(text);
+            //Return a failure
+            return xhr;
+        }
+    });
+}
