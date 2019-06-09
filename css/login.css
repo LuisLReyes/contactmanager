@@ -61,6 +61,14 @@ h5 {
   border-color: #313335;
   color: #e1e3e8;
 }
+.form-signin input[type="email"] {
+  margin-bottom: -2px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #888c93;
+  border-color: #313335;
+  color: #e1e3e8;
+}
 .form-signin input[id="inputPassword"] {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
