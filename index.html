@@ -27,7 +27,7 @@
             <input id = "togglePass" onclick="togglePassword()" type="checkbox" value="passVal"> <label for="checkbox">Show password</label>
             <label id="loginResult"></label>
           </div>
-          <button type="submit" id="loginBtn" class="btn btn-lg btn-primary btn-block">Login</button>
+          <button type="submit" id="loginBtn" class="btn btn-lg btn-primary btn-block" value="Submit">Login</button>
           <form class="form-signin" onsubmit="doCreate()">
           <a href="#" data-toggle="modal" data-target="#signUpPage" id="create">Create an account</a>
           <div class="modal fade" id="signUpPage" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -53,14 +53,14 @@
                </div>
                <div class="modal-footer">
                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                 <button type="submit" id ="create" class="btn btn-primary">Create Account</button>
+                 <button type="submit" value="Submit" id ="create" class="btn btn-primary">Create Account</button>
                </div>
              </div>
            </div>
          </div>
       </form>
-         <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
-       </form>
+      <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
+      </form>
 
        </body>
 
