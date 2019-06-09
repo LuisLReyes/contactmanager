@@ -17,8 +17,8 @@
 </html>
 
 <script>
-temp = login("mike","mikepass");
-
+//temp = login("mike","mikepass");
+getcontacts("1");
 
 
 
