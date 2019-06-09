@@ -14,7 +14,7 @@ function addRow(){
 	      '<td><input type="text" class="form-control" name="Address" id="address"></td>' +
 	'<td>'  + '</td>' +
 	  '</tr>';
-	$("table").append(row);		
+	$("table").prepend(row);		
 	
 }
 
