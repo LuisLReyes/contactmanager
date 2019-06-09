@@ -76,3 +76,29 @@ function deleteContact(contactID){
         }
     });
 }
+
+function addContact(contactToEdit){
+    //Ajax call
+    $.ajax({
+        url: "https://contactmanager4331.herokuapp.com/api-files/api/contact/udpatecontact.php",
+        type : "PUT",
+        data: contactToEdit,
+        contentType : 'application/json',
+        success : function(result){
+            console.log("Contacts Updated");
+            console.log(result);
+            
+            //Return message
+            return result;
+        },
+        error: function(xhr, resp, text){
+            // on error, log it
+            console.log("Contacts was not updated");
+            console.log(xhr);
+            console.log(resp);
+            consold.log(text);
+            //Return a failure
+            return xhr;
+        }
+    });
+}
