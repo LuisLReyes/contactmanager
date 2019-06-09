@@ -47,10 +47,10 @@ h5 {
 .form-signin .form-control:focus {
   z-index: 2;
 }
-.form-signin .modal-footer {
+.form-create .modal-footer {
   border-color: inherit;
 }
-.form-signin .modal-header {
+.form-create .modal-header {
   border-color: inherit;
 }
 .form-signin input[type="text"] {
@@ -61,7 +61,15 @@ h5 {
   border-color: #313335;
   color: #e1e3e8;
 }
-.form-signin input[type="email"] {
+.form-create input[type="text"] {
+  margin-bottom: -2px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #888c93;
+  border-color: #313335;
+  color: #e1e3e8;
+}
+.form-create input[type="email"] {
   margin-bottom: -2px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -82,27 +90,41 @@ h5 {
   border-color: #313335;
   color: #e1e3e8;
 }
+.form-create input[type="password"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #888c93;
+  border-color: #313335;
+  color: #e1e3e8;
+}
 .form-signin input[type="checkbox"] {
+  color:#e1e3e8;
+}
+.form-create input[type="checkbox"] {
   color:#e1e3e8;
 }
 .form-signin button[type="submit"] {
   background-color: #6666ff;
   border-color: #6666ff;
 }
-.form-signin input[id="signUpName"] {
+.form-create button[type="submit"] {
+  background-color: #6666ff;
+  border-color: #6666ff;
+}
+.form-create input[id="signUpName"] {
   margin-bottom: -2px;
 }
-.form-signin input[id="emailAdd"] {
+.form-create input[id="emailAdd"] {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.form-signin input[id="signUpId"] {
+.form-create input[id="signUpId"] {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-.form-signin input[id="signUpPassword"] {
+.form-create input[id="signUpPassword"] {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -115,6 +137,13 @@ h5 {
 .form-signin :-ms-input-placeholder {
   color: #a1a7af;
 }
+.form-create ::placeholder {
+  color: #a1a7af;
+}
+.form-create :-ms-input-placeholder {
+  color: #a1a7af;
+}
+
 
 ::-ms-input-placeholder {
   color: #a1a7af;
