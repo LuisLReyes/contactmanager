@@ -18,7 +18,7 @@
 
 <script>
 //temp = login("mike","mikepass");
-getcontacts("1");
+getContacts("1");
 
 
 
