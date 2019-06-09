@@ -1,6 +1,6 @@
 
 //Call to create a new user
-function signup(signupUsername, signupPassword, signupFirstName,){
+function signup(signupUsername, signupPassword, signupFirstName){
     //Prepare data
     var jsonPayload = JSON.stringify({first_name: signupFirstName, user_name : signupUsername, password : signupPassword});
     //Ajax call
