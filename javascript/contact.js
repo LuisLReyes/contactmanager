@@ -12,7 +12,7 @@ function addRow(){
 	      '<td><input type="text" class="form-control" name="Email" id="email"></td>' +
 	      '<td><input type="text" class="form-control" name="Phone Number" id="phone"></td>' +
 	      '<td><input type="text" class="form-control" name="Address" id="address"></td>' +
-	'<td>' + action + '</td>' +
+	'<td>'  + '</td>' +
 	  '</tr>';
 	$("table").append(row);		
 	
