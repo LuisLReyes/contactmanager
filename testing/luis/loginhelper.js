@@ -1,6 +1,6 @@
 
 //Call to create a new user
-function signup(signupUsername, signupPassword, signupFirstName,){
+function signup(signupUsername, signupPassword, signupFirstName){
     //Prepare data
     var jsonPayload = JSON.stringify({first_name: signupFirstName, user_name : signupUsername, password : signupPassword});
     //Ajax call
@@ -12,7 +12,7 @@ function signup(signupUsername, signupPassword, signupFirstName,){
         success : function(result){
             console.log("User Created");
             console.log(result);
-    
+
             //Login after creating user
             return login(signupUsername, signupPassword);
         },
@@ -21,7 +21,7 @@ function signup(signupUsername, signupPassword, signupFirstName,){
             console.log("User not logged in");
             console.log(xhr);
             console.log(resp);
-            consold.log(text);
+            console.log(text);
             //Return a failure
             return xhr;
         }
@@ -40,9 +40,9 @@ function login(loginUsername,loginPassword){
         success : function(result){
             console.log("User Logged in");
             console.log(result);
-    
+
             //Change page if you want
-            location = 'contacts.html';
+            location = 'contact.html';
         },
         error: function(xhr, resp, text){
             // on error, log it
@@ -51,6 +51,7 @@ function login(loginUsername,loginPassword){
             console.log(resp);
             console.log(text);
             //return a failure
+            document.getElementById("loginResult").innerHTML = "Incorrect Username/Password Combination";
             return xhr;
         }
     });
