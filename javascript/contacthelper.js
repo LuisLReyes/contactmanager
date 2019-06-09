@@ -1,3 +1,11 @@
+var contactData;
+//This runs when the page is loaded
+$(function(){
+    contactData = getContacts(1); 
+});
+
+
+
 function getContacts(userID){
     //Ajax call
     $.ajax({
