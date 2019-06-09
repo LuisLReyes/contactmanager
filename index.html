@@ -17,7 +17,7 @@
     </head>
     <body class="text-center">
         <!--Begin page HTML here-->
-        <form class="form-signin">
+        <form class="form-signin" onsubmit="doLogin">
           <h1 class="mb-3 font-weight-normal">Contact Manager</h1>
           <label for="inputUserId" class ="sr-only">User ID</label>
           <input type = "text" id ="inputUserId" class="form-control" placeholder="User ID">
@@ -27,7 +27,8 @@
             <input id = "togglePass" onclick="togglePassword()" type="checkbox" value="passVal"> <label for="checkbox">Show password</label>
             <label id="loginResult"></label>
           </div>
-          <button type="submit" onclick="doLogin()" id="loginBtn" class="btn btn-lg btn-primary btn-block">Login</button>
+          <button type="submit" id="loginBtn" class="btn btn-lg btn-primary btn-block">Login</button>
+          <form class="form-signin" onsubmit="doCreate()">
           <a href="#" data-toggle="modal" data-target="#signUpPage" id="create">Create an account</a>
           <div class="modal fade" id="signUpPage" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
           aria-hidden="true">
@@ -52,11 +53,12 @@
                </div>
                <div class="modal-footer">
                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                 <button type="submit" onclick="doCreate()" id ="create" class="btn btn-primary">Create Account</button>
+                 <button type="submit" id ="create" class="btn btn-primary">Create Account</button>
                </div>
              </div>
            </div>
          </div>
+      </form>
          <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
        </form>
 
