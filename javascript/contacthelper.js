@@ -14,7 +14,7 @@ function displayContacts(userID){
         success : function(result){
             console.log("Contacts Retrieved:");
             console.log(result);
-
+            $("tbody").empty();
             result.data.forEach(contact =>  {
                 console.log(contact);
                 var row = '<tr><td id="first_name'+contact.id+'">'+JSON.stringify(contact.first_name).replace(/['"]+/g, '')+'</td>' +
@@ -24,7 +24,6 @@ function displayContacts(userID){
                     '<td id="address'+contact.id+'">'+JSON.stringify(contact.address).replace(/['"]+/g, '')+'</td>' +
                     '<td id="buttons'+contact.id+'" style="text-align:center"> <span class="oi oi-cog" style="width:40%"></span><span class="oi oi-x" style="width:40%" onclick="deletecontact('+contact.id+')"></span></td>' +
                     '</tr>';
-                $("tbody").empty();
                 $("table").prepend(row);
             });
 
