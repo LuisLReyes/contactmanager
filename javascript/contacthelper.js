@@ -17,7 +17,7 @@ function displayContacts(userID){
             
             result.data.forEach(contact =>  {
                 console.log(contact);
-                var td1 = '<td id="first_name'+contact.id+'>'+JSON.stringify(contact.first_name)+'</td>';
+                var td1 = '<td id="first_name'+contact.id+'">'+JSON.stringify(contact.first_name)+'</td>';
                 $("table").prepend(td1);
             });
 
