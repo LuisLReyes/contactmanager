@@ -191,7 +191,7 @@ function editContact(contactId){
    var email = $('#email'+contactId).text();
    var phone = $('#phone_number'+contactId).text();
  	var address = $('#address'+contactId).text();
-   $('#'+contactId).clear;
+   $('#'+contactId).remove();
    var row = '<tr id = '+contactId+'>' + '<td><input type="text" class="form-control" name="First Name" id="fname" value='+fname+'></td>' +
     '<td><input type="text" class="form-control" name="Last Name" id="lname" value='+lname+'></td>' +
     '<td><input type="text" class="form-control" name="Email" id="email" value='+email+'></td>' +
