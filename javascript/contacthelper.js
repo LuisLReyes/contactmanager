@@ -144,6 +144,7 @@ function updateContact(contactToEdit){
         success : function(result){
             console.log("Contacts Updated");
             console.log(result);
+            displayContacts(1);
 
             //Return message
             return result;
@@ -212,5 +213,4 @@ function editHelper(contactId){
    var updateObj = {users_id : 1, first_name : fname, last_name : lname, phone_number : phone, address : address, email : email, id : contactId};
    updateObj = JSON.stringify(updateObj);
    updateContact(updateObj);
-   displayContacts(1);
 }
