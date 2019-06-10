@@ -88,6 +88,7 @@ function addContact(contactToAdd){
         success : function(result){
             console.log("Contacts Added");
             console.log(result);
+            $("table").empty();
             displayContacts(1);
 
             //Return message
