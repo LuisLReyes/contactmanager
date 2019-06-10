@@ -24,6 +24,6 @@ function saveContact(){
   var email = document.getElementById(email);
   var phone = document.getElementById(phone);
   var address = document.getElementById(address);
-  var contactObj = {users_id : 1, first_name : fname, last_name : lname, phone_number : phone, address : address};
+  var contactObj = JSON.stringify({users_id : 1, first_name : fname, last_name : lname, phone_number : phone, address : address});
   addContact(contactObj);
 }
