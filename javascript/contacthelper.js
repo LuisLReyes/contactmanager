@@ -1,7 +1,7 @@
 var contactData;
 //This runs when the page is loaded
 $(function(){
-    contactData = getContacts(userID); 
+    contactData = getContacts(1); 
     displayContacts(1);
 });
 
