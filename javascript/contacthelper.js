@@ -17,11 +17,11 @@ function displayContacts(userID){
 
             result.data.forEach(contact =>  {
                 console.log(contact);
-                var row = '<tr><td id="first_name'+contact.id+'">'+JSON.stringify(contact.first_name)+'</td>' +
-                    '<td id="last_name'+contact.id+'">'+JSON.stringify(contact.last_name)+'</td>' +
-                    '<td id="email'+contact.id+'">'+JSON.stringify(contact.email)+'</td>' +
-                    '<td id="phone_number'+contact.id+'">'+JSON.stringify(contact.phone_number) +'</td>' +
-                    '<td id="address'+contact.id+'">'+JSON.stringify(contact.address)+'</td>' +
+                var row = '<tr><td id="first_name'+contact.id+'">'+JSON.stringify(contact.first_name).replace(/['"]+/g, '')+'</td>' +
+                    '<td id="last_name'+contact.id+'">'+JSON.stringify(contact.last_name).replace(/['"]+/g, '')+'</td>' +
+                    '<td id="email'+contact.id+'">'+JSON.stringify(contact.email).replace(/['"]+/g, '')+'</td>' +
+                    '<td id="phone_number'+contact.id+'">'+JSON.stringify(contact.phone_number).replace(/['"]+/g, '') +'</td>' +
+                    '<td id="address'+contact.id+'">'+JSON.stringify(contact.address).replace(/['"]+/g, '')+'</td>' +
                     '<td id="buttons'+contact.id+'"> <span class="oi oi-x"></span> </td></tr>';
                 $("table").prepend(row);
             });
