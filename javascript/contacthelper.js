@@ -22,7 +22,7 @@ function displayContacts(userID){
                     '<td id="email'+contact.id+'">'+JSON.stringify(contact.email).replace(/['"]+/g, '')+'</td>' +
                     '<td id="phone_number'+contact.id+'">'+JSON.stringify(contact.phone_number).replace(/['"]+/g, '') +'</td>' +
                     '<td id="address'+contact.id+'">'+JSON.stringify(contact.address).replace(/['"]+/g, '')+'</td>' +
-                    '<td id="buttons'+contact.id+'"> <span class="oi oi-x"></span> </td></tr>';
+                    '<td id="buttons'+contact.id+'"> <span class="oi oi-x"></span> <span class="oi oi-cog"></span></td></tr>';
                 $("table").prepend(row);
             });
 
