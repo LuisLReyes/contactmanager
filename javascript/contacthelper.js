@@ -22,7 +22,7 @@ function displayContacts(userID){
                     '<td id="email'+contact.id+'">'+JSON.stringify(contact.email).replace(/['"]+/g, '')+'</td>' +
                     '<td id="phone_number'+contact.id+'">'+JSON.stringify(contact.phone_number).replace(/['"]+/g, '') +'</td>' +
                     '<td id="address'+contact.id+'">'+JSON.stringify(contact.address).replace(/['"]+/g, '')+'</td>' +
-                    '<td id="buttons'+contact.id+'" style="text-align:center"> <span class="oi oi-cog" style="width:40%"></span><span class="oi oi-x" style="width:40%" onclick="deletecontact('+contact.id+')"></span></td>' +
+                    '<td id="buttons'+contact.id+'" style="text-align:center"> <span class="oi oi-cog" style="width:40%"></span><span class="oi oi-x" style="width:40%" onclick="deleteContact('+contact.id+')"></span></td>' +
                     '</tr>';
                 $("table").prepend(row);
             });
@@ -118,7 +118,7 @@ function deleteContact(contactID){
         success : function(result){
             console.log("Contact Deleted");
             console.log(result);
-
+            displayContacts(1);
             //Return result
             return result;
         },
