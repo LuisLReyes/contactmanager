@@ -19,12 +19,12 @@ function addRow(){
 }
 
 function saveContact(){
-  var fname = document.getElementById('fname').value;
-  var lname = document.getElementById('lname').value;
-  var email = document.getElementById('email').value;
-  var phone = document.getElementById('phone').value;
-	var address = document.getElementById('address').value;
-	var contactObj = {users_id : 1, first_name : fname, last_name : lname, phone_number : phone, address : address};
+  var fname = document.getElementById('fname').value.replace(/['"]+/g, '');
+  var lname = document.getElementById('lname').value.replace(/['"]+/g, '');
+  var email = document.getElementById('email').value.replace(/['"]+/g, '');
+  var phone = document.getElementById('phone').value.replace(/['"]+/g, '');
+	var address = document.getElementById('address').value.replace(/['"]+/g, '');
+	var contactObj = {users_id : 1, first_name : fname, last_name : lname, phone_number : phone, address : address, email : email};
 	console.log(contactObj);
 	contactObj = JSON.stringify(contactObj);
   addContact(contactObj);
