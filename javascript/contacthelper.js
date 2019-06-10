@@ -17,12 +17,12 @@ function displayContacts(userID){
             
             result.data.forEach(contact =>  {
                 console.log(contact);
-                var row = '<td id="first_name'+contact.id+'">'+JSON.stringify(contact.first_name)+'</td>' + 
+                var row = '<tr><td id="first_name'+contact.id+'">'+JSON.stringify(contact.first_name)+'</td>' + 
                     '<td id="last_name'+contact.id+'">'+JSON.stringify(contact.last_name)+'</td>' + 
                     '<td id="email'+contact.id+'">'+JSON.stringify(contact.email)+'</td>' +
                     '<td id="phone_number'+contact.id+'">'+JSON.stringify(contact.phone_number) +'</td>' +
                     '<td id="address'+contact.id+'">'+JSON.stringify(contact.address)+'</td>' + 
-                    '<td id="buttons'+contact.id+'"> :^) </td>';
+                    '<td id="buttons'+contact.id+'"> :^) </td></tr>';
                 $("table").prepend(row);
             });
 
