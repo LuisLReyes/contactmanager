@@ -198,7 +198,7 @@ function editContact(contactId){
     '<td><input type="text" class="form-control" name="Email" id="email" value='+email+'></td>' +
     '<td><input type="text" class="form-control" name="Phone Number" id="phone" value='+phone+'></td>' +
     '<td><input type="text" class="form-control" name="Address" id="address" value = '+address+'></td>' +
-    '<td style="text-align:center"><span class="oi oi-circle-check" onclick="editHelper('+contactId+')"></span></td>' +
+    '<td><span class="oi oi-circle-check" onclick="editHelper('+contactId+')"></span></td>' +
     '</tr>';
    $("table").prepend(row);
 
@@ -213,4 +213,25 @@ function editHelper(contactId){
    var updateObj = {users_id : 1, first_name : fname, last_name : lname, phone_number : phone, address : address, email : email, id : contactId};
    updateObj = JSON.stringify(updateObj);
    updateContact(updateObj);
+}
+
+function contactSearch(){
+    var input, filter, table, tr, td, i, value;
+    input = document.getElementById("searchbar");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("contacttable");
+    tr = table.getElementsByTagName("tr");
+
+    for(i=0, i < tr.length;i++){
+        td = tr[i].getElementsByTagName("td")[0];
+        if(td){
+            value = td.textContent || td.innerText;
+            if(value.toUpperCase().indexOf(filter) > -1){
+                tr[i].style.display = "";
+            }
+            else{
+                tr[i].style.display = "none";
+            }
+        }
+    }
 }

@@ -52,13 +52,12 @@
         <div class="table-wrapper">
 		<div class="row justify-content-between">
 			<div class="col-6">
-				<input class="sbar float-left" type="search" placeholder="Search Contacts">
-				<button class="btn btn-outline-success float-left" type="submit">Search</button>
+				<input id="searchbar" class="sbar float-left" type="search" placeholder="Search Contacts" onkeyup="contactSearch()">
 			</div>
 			<div class="col-2">
 				<button class="btn btn-primary my-2 my-sm-0 add-new float-right" onclick="addRow()" type="submit">Add Contact</button>
 			</div>
-			<table class="table table-bordered">
+			<table class="table table-bordered" id="contacttable">
 		</div>
 		  <thead class="thead-dark">
 			<tr>
