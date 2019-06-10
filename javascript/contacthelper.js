@@ -187,6 +187,7 @@ function logout(){
 function editContact(contactId){
 
    var fname = document.getElementById('first_name'+contactId).value;
+   console.log(fname);
    var lname = document.getElementById('last_name'+contactId).value;
    var email = document.getElementById('email'+contactId).value;
    var phone = document.getElementById('phone_number'+contactId).value;
