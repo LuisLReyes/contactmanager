@@ -137,7 +137,7 @@ function deleteContact(contactID){
 function updateContact(contactToEdit){
     //Ajax call
     $.ajax({
-        url: "https://contactmanager4331.herokuapp.com/api-files/api/contact/udpatecontact.php",
+        url: "https://contactmanager4331.herokuapp.com/api-files/api/contact/updatecontact.php",
         type : "PUT",
         data: contactToEdit,
         contentType : 'application/json',
