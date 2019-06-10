@@ -212,4 +212,5 @@ function editHelper(contactId){
    var updateObj = {users_id : 1, first_name : fname, last_name : lname, phone_number : phone, address : address, email : email, id : contactId};
    updateObj = JSON.stringify(updateObj);
    updateContact(updateObj);
+   displayContacts(1);
 }
