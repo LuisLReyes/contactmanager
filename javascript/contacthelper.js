@@ -18,7 +18,7 @@ function displayContacts(userID){
             result.data.forEach(contact =>  {
                 console.log(contact);
                 var row = '<tr><td id="first_name'+contact.id+'">'+JSON.stringify(contact.first_name)+'</td>' +
-                    '<td id="last_name'+contact.id+'">'+JSON.stringify(contact.last_name)+'</td>' + 
+                    '<td id="last_name'+contact.id+'">'+JSON.stringify(contact.last_name)+'</td>' +
                     '<td id="email'+contact.id+'">'+JSON.stringify(contact.email)+'</td>' +
                     '<td id="phone_number'+contact.id+'">'+JSON.stringify(contact.phone_number) +'</td>' +
                     '<td id="address'+contact.id+'">'+JSON.stringify(contact.address)+'</td>' +
@@ -34,7 +34,7 @@ function displayContacts(userID){
             console.log("Contacts unable to be loaded");
             console.log(xhr);
             console.log(resp);
-            consold.log(text);
+            console.log(text);
             //Return a failure
             return xhr;
         }
@@ -71,7 +71,7 @@ function getContacts(userID){
             console.log("Contacts unable to be loaded");
             console.log(xhr);
             console.log(resp);
-            consold.log(text);
+            console.log(text);
             //Return a failure
             return xhr;
         }
@@ -98,7 +98,7 @@ function addContact(contactToAdd){
             console.log("Contacts was not added");
             console.log(xhr);
             console.log(resp);
-            consold.log(text);
+            console.log(text);
             //Return a failure
             return xhr;
         }
@@ -126,7 +126,7 @@ function deleteContact(contactID){
             console.log("Contacts unable to be deleted");
             console.log(xhr);
             console.log(resp);
-            consold.log(text);
+            console.log(text);
             //Return a failure
             return xhr;
         }
@@ -152,7 +152,7 @@ function updateContact(contactToEdit){
             console.log("Contacts was not updated");
             console.log(xhr);
             console.log(resp);
-            consold.log(text);
+            console.log(text);
             //Return a failure
             return xhr;
         }
@@ -175,7 +175,7 @@ function logout(){
             console.log("Failed to logout");
             console.log(xhr);
             console.log(resp);
-            consold.log(text);
+            console.log(text);
             //Return a failure
             return xhr;
         }
