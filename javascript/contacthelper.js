@@ -186,12 +186,12 @@ function logout(){
 
 function editContact(contactId){
 
-   var fname = document.getElementById('first_name'+contactId);
-   console.log(fname);
-   var lname = document.getElementById('last_name'+contactId).value;
-   var email = document.getElementById('email'+contactId).value;
-   var phone = document.getElementById('phone_number'+contactId).value;
- 	var address = document.getElementById('address'+contactId).value;
+   var fname = $('#first_name'+contactId).text();
+   var lname = $('#last_name'+contactId).text();
+   var email = $('#email'+contactId).text();
+   var phone = $('#phone_number'+contactId).text();
+ 	var address = $('#address'+contactId).text();
+   $('#'+contactId).clear;
    var row = '<tr id = '+contactId+'>' + '<td><input type="text" class="form-control" name="First Name" id="fname" value='+fname+'></td>' +
     '<td><input type="text" class="form-control" name="Last Name" id="lname" value='+lname+'></td>' +
     '<td><input type="text" class="form-control" name="Email" id="email" value='+email+'></td>' +
