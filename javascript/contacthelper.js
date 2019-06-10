@@ -198,7 +198,7 @@ function editContact(contactId){
     '<td><input type="text" class="form-control" name="Email" id="email" value='+email+'></td>' +
     '<td><input type="text" class="form-control" name="Phone Number" id="phone" value='+phone+'></td>' +
     '<td><input type="text" class="form-control" name="Address" id="address" value = '+address+'></td>' +
-    '<td><span class="oi oi-circle-check" onclick="editHelper('+contactId+')"></span><span class="oi oi-x" style="width:40%" onclick=""></span></td>' +
+    '<td style="text-align:center"><span class="oi oi-circle-check" onclick="editHelper('+contactId+')"></span></td>' +
     '</tr>';
    $("table").prepend(row);
 
