@@ -222,7 +222,7 @@ function contactSearch(){
     table = document.getElementById("contacttable");
     tr = table.getElementsByTagName("tr");
 
-    for(i=0, i < tr.length;i++){
+    for(i=0; i < tr.length;i++){
         td = tr[i].getElementsByTagName("td")[0];
         if(td){
             value = td.textContent || td.innerText;
