@@ -1,7 +1,7 @@
 var contactData;
 //This runs when the page is loaded
 $(function(){
-    contactData = getContacts(1); 
+    contactData = getContacts(1);
     displayContacts(1);
 });
 
@@ -14,14 +14,14 @@ function displayContacts(userID){
         success : function(result){
             console.log("Contacts Retrieved:");
             console.log(result);
-            
+
             result.data.forEach(contact =>  {
                 console.log(contact);
-                var row = '<tr><td id="first_name'+contact.id+'">'+JSON.stringify(contact.first_name)+'</td>' + 
+                var row = '<tr><td id="first_name'+contact.id+'">'+JSON.stringify(contact.first_name)+'</td>' +
                     '<td id="last_name'+contact.id+'">'+JSON.stringify(contact.last_name)+'</td>' + 
                     '<td id="email'+contact.id+'">'+JSON.stringify(contact.email)+'</td>' +
                     '<td id="phone_number'+contact.id+'">'+JSON.stringify(contact.phone_number) +'</td>' +
-                    '<td id="address'+contact.id+'">'+JSON.stringify(contact.address)+'</td>' + 
+                    '<td id="address'+contact.id+'">'+JSON.stringify(contact.address)+'</td>' +
                     '<td id="buttons'+contact.id+'"> :^) </td></tr>';
                 $("table").prepend(row);
             });
@@ -49,7 +49,7 @@ function displayContacts(userID){
 	      '<td><input type="text" class="form-control" name="Address" id="address"></td>' +
 	  '<td><button class="btn btn-primary my-2 my-sm-0 add-new" onclick="" type="submit">Save</button></td>' +
 	  '</tr>';
-	//$("table").prepend(row);		
+	//$("table").prepend(row);
 }
 
 
@@ -62,7 +62,7 @@ function getContacts(userID){
         success : function(result){
             console.log("Contacts Retrieved:");
             console.log(result);
-            
+
             //Return contacts retrieved
             return result;
         },
@@ -88,7 +88,8 @@ function addContact(contactToAdd){
         success : function(result){
             console.log("Contacts Added");
             console.log(result);
-            
+            displayContacts(1);
+
             //Return message
             return result;
         },
@@ -116,7 +117,7 @@ function deleteContact(contactID){
         success : function(result){
             console.log("Contact Deleted");
             console.log(result);
-            
+
             //Return result
             return result;
         },
@@ -142,7 +143,7 @@ function updateContact(contactToEdit){
         success : function(result){
             console.log("Contacts Updated");
             console.log(result);
-            
+
             //Return message
             return result;
         },
@@ -165,7 +166,7 @@ function logout(){
         type : "POST",
         contentType : 'application/json',
         success : function(result){
-            console.log("Logged out");            
+            console.log("Logged out");
             //Logout
             location = 'index.html';
         },
