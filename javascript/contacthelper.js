@@ -17,12 +17,12 @@ function displayContacts(userID){
             $("tbody").empty();
             result.data.forEach(contact =>  {
                 console.log(contact);
-                var row = '<tr><td id="first_name'+contact.id+'">'+JSON.stringify(contact.first_name).replace(/['"]+/g, '')+'</td>' +
+                var row = '<tr id = '+contact.id+'><td id="first_name'+contact.id+'">'+JSON.stringify(contact.first_name).replace(/['"]+/g, '')+'</td>' +
                     '<td id="last_name'+contact.id+'">'+JSON.stringify(contact.last_name).replace(/['"]+/g, '')+'</td>' +
                     '<td id="email'+contact.id+'">'+JSON.stringify(contact.email).replace(/['"]+/g, '')+'</td>' +
                     '<td id="phone_number'+contact.id+'">'+JSON.stringify(contact.phone_number).replace(/['"]+/g, '') +'</td>' +
                     '<td id="address'+contact.id+'">'+JSON.stringify(contact.address).replace(/['"]+/g, '')+'</td>' +
-                    '<td id="buttons'+contact.id+'" style="text-align:center"> <span class="oi oi-cog" style="width:40%"></span><span class="oi oi-x" style="width:40%" onclick="deleteContact('+contact.id+')"></span></td>' +
+                    '<td id="buttons'+contact.id+'" style="text-align:center"> <span class="oi oi-cog" style="width:40%" onclick="editContact('+contact.id+')"></span><span class="oi oi-x" style="width:40%" onclick="deleteContact('+contact.id+')"></span></td>' +
                     '</tr>';
                 $("table").prepend(row);
             });
