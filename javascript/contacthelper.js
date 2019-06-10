@@ -22,7 +22,7 @@ function displayContacts(userID){
                     '<td id="email'+contact.id+'">'+JSON.stringify(contact.email).replace(/['"]+/g, '')+'</td>' +
                     '<td id="phone_number'+contact.id+'">'+JSON.stringify(contact.phone_number).replace(/['"]+/g, '') +'</td>' +
                     '<td id="address'+contact.id+'">'+JSON.stringify(contact.address).replace(/['"]+/g, '')+'</td>' +
-                    '<td id="buttons'+contact.id+'" style="text-align:center"> <span class="oi oi-cog" style="width:40%" onclick="editContact('+contact.id+')"></span><span class="oi oi-x" style="width:40%" onclick="deleteContact('+contact.id+')"></span></td>' +
+                    '<td id="buttons'+contact.id+'" style="text-align:center"> <span class="oi oi-cog" style="width:40%" onclick="editContact('+contact.id+')"></span> +
                     '</tr>';
                 $("table").prepend(row);
             });
@@ -191,9 +191,10 @@ function editContact(contactId){
     '<td><input type="text" class="form-control" name="Email" id="email"></td>' +
     '<td><input type="text" class="form-control" name="Phone Number" id="phone"></td>' +
     '<td><input type="text" class="form-control" name="Address" id="address"></td>' +
-       '<td><span class="oi oi-circle-check" onclick="editHelper('+contactId+')"></span></td>' +
-       '</tr>';
-   $("table").append(row);
+    '<td><span class="oi oi-circle-check" onclick="editHelper('+contactId+')"></span></td>' +
+    '<span class="oi oi-x" style="width:40%" onclick=""></span></td>' +
+    '</tr>';
+   $("table").prepend(row);
 
 }
 
