@@ -191,11 +191,11 @@ function editContact(contactId){
    var email = document.getElementById('email'+contactId).value;
    var phone = document.getElementById('phone_number'+contactId).value;
  	var address = document.getElementById('address'+contactId).value;
-   var row = '<tr id = '+contactId+'>' + '<td><input type="text" class="form-control" name="First Name" id="fname" value='fname'></td>' +
-    '<td><input type="text" class="form-control" name="Last Name" id="lname" value='lname'></td>' +
-    '<td><input type="text" class="form-control" name="Email" id="email" value='email'></td>' +
-    '<td><input type="text" class="form-control" name="Phone Number" id="phone" value='phone'></td>' +
-    '<td><input type="text" class="form-control" name="Address" id="address" value = 'address'></td>' +
+   var row = '<tr id = '+contactId+'>' + '<td><input type="text" class="form-control" name="First Name" id="fname" value='+fname+'></td>' +
+    '<td><input type="text" class="form-control" name="Last Name" id="lname" value='+lname+'></td>' +
+    '<td><input type="text" class="form-control" name="Email" id="email" value='+email+'></td>' +
+    '<td><input type="text" class="form-control" name="Phone Number" id="phone" value='+phone+'></td>' +
+    '<td><input type="text" class="form-control" name="Address" id="address" value = '+address+'></td>' +
     '<td><span class="oi oi-circle-check" onclick="editHelper('+contactId+')"></span><span class="oi oi-x" style="width:40%" onclick=""></span></td>' +
     '</tr>';
    $("table").prepend(row);
