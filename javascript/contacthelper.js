@@ -216,22 +216,75 @@ function editHelper(contactId){
 }
 
 function contactSearch(){
-    var input, filter, table, tr, td, i, value;
+    var input, filter, table, tr, td, i, value, inRow;
     input = document.getElementById("searchbar");
     filter = input.value.toUpperCase();
     table = document.getElementById("contacttable");
     tr = table.getElementsByTagName("tr");
 
     for(i=0; i < tr.length;i++){
+        inRow=0;
         td = tr[i].getElementsByTagName("td")[0];
         if(td){
             value = td.textContent || td.innerText;
             if(value.toUpperCase().indexOf(filter) > -1){
-                tr[i].style.display = "";
+                inRow = 1;
+                //tr[i].style.display = "";
             }
             else{
-                tr[i].style.display = "none";
+                //tr[i].style.display = "none";
             }
         }
+        td = tr[i].getElementsByTagName("td")[1];
+        if(td){
+            value = td.textContent || td.innerText;
+            if(value.toUpperCase().indexOf(filter) > -1){
+                inRow = 1;
+                //tr[i].style.display = "";
+            }
+            else{
+                //tr[i].style.display = "none";
+            }
+        }
+        td = tr[i].getElementsByTagName("td")[2];
+        if(td){
+            value = td.textContent || td.innerText;
+            if(value.toUpperCase().indexOf(filter) > -1){
+                inRow = 1;
+                //tr[i].style.display = "";
+            }
+            else{
+                //tr[i].style.display = "none";
+            }
+        }
+        td = tr[i].getElementsByTagName("td")[3];
+        if(td){
+            value = td.textContent || td.innerText;
+            if(value.toUpperCase().indexOf(filter) > -1){
+                inRow = 1;
+                //tr[i].style.display = "";
+            }
+            else{
+                //tr[i].style.display = "none";
+            }
+        }
+        td = tr[i].getElementsByTagName("td")[4];
+        if(td){
+            value = td.textContent || td.innerText;
+            if(value.toUpperCase().indexOf(filter) > -1){
+                inRow = 1;
+                //tr[i].style.display = "";
+            }
+            else{
+                //tr[i].style.display = "none";
+            }
+        }
+        if(inRow){
+            tr[i].style.display = "";
+        }
+        else{
+            tr[i].style.display = "none";
+        }
+        
     }
 }
