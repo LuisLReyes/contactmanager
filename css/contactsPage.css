@@ -7,7 +7,18 @@ body{
   background-color: #373D5C;
 }
 
+.navb{
+  background-color: #D8DDFA
+}
 
+.websiteBanner{
+  background-image: url("../images/contact.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right; 
+  background: rgb(125,119,231);
+  background: linear-gradient(304deg, rgba(125,119,231,1) 0%, rgba(137,137,227,1) 53%, rgba(0,212,255,1) 100%);
+}
 
 .sbar {
     width: 70%;
