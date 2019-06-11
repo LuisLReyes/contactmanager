@@ -21,15 +21,10 @@
     <body> 
         <!--Begin page HTML here-->
 		<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-		  <a class="navbar-brand" href="#">	Hello, <?php echo $_SESSION["name"];?>!</a>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		  </button>
-
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 			  <li class="nav-item">
-				<a class="nav-link" href="https://contactmanager4331.herokuapp.com/index.html">Logout</a>
+					<span class="nav-link" style="cursor:pointer" onclick="logout()">Logout</span>
 			  </li>
 			</ul>
 		  </div>
