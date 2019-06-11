@@ -47,7 +47,6 @@ function login(loginUsername,loginPassword){
             console.log(resp);
             console.log(text);
             //return a failure
-            alert("Bad password");
             document.getElementById("loginResult").innerHTML = "Incorrect Username/Password Combination";
             return xhr;
         }
