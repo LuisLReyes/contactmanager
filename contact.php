@@ -67,7 +67,7 @@
 			  <th>Action</th>
 			</tr>
 		  </thead>
-		  <tbody>
+		  <tbody class ="tbody-light">
 
 		  </tbody>
 		</table>
