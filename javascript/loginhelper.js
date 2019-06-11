@@ -11,8 +11,6 @@ function signup(signupUsername, signupPassword, signupFirstName){
         data : jsonPayload,
         success : function(result){
             console.log("User Created");
-            console.log(result);
-            alert("User Creation Successful");
             //Login after creating user
             return login(signupUsername, signupPassword);
         },
@@ -39,8 +37,6 @@ function login(loginUsername,loginPassword){
         data : jsonPayload,
         success : function(result){
             console.log("User Logged in");
-            console.log(result);
-            alert("Login Successful");
             //Change page if you want
             location = 'contact.php';
         },

@@ -14,10 +14,8 @@ function displayContacts(userID){
         contentType : 'application/json',
         success : function(result){
             console.log("Contacts Retrieved:");
-            console.log(result);
             $("tbody").empty();
             result.data.forEach(contact =>  {
-                console.log(contact);
                 var row = '<tr id = '+contact.id+'><td id="first_name'+contact.id+'">'+JSON.stringify(contact.first_name).replace(/['"]+/g, '')+'</td>' +
                     '<td id="last_name'+contact.id+'">'+JSON.stringify(contact.last_name).replace(/['"]+/g, '')+'</td>' +
                     '<td id="email'+contact.id+'">'+JSON.stringify(contact.email).replace(/['"]+/g, '')+'</td>' +
@@ -62,8 +60,7 @@ function getContacts(userID){
         type : "GET",
         contentType : 'application/json',
         success : function(result){
-            console.log("Contacts Retrieved:");
-            console.log(result);
+            console.log("Contacts Retrieved");
 
             //Return contacts retrieved
             return result;
@@ -89,7 +86,6 @@ function addContact(contactToAdd){
         contentType : 'application/json',
         success : function(result){
             console.log("Contacts Added");
-            console.log(result);
             displayContacts(loggedInId);
 
             //Return message
@@ -118,7 +114,6 @@ function deleteContact(contactID){
         contentType : 'application/json',
         success : function(result){
             console.log("Contact Deleted");
-            console.log(result);
             displayContacts(loggedInId);
             //Return result
             return result;
@@ -144,7 +139,6 @@ function updateContact(contactToEdit){
         contentType : 'application/json',
         success : function(result){
             console.log("Contacts Updated");
-            console.log(result);
             displayContacts(loggedInId);
 
             //Return message
@@ -275,7 +269,6 @@ function addRow(){
       var phone = document.getElementById('phone').value;
         var address = document.getElementById('address').value;
         var contactObj = {users_id : loggedInId, first_name : fname, last_name : lname, phone_number : phone, address : address, email : email};
-        console.log(contactObj);
         contactObj = JSON.stringify(contactObj);
       addContact(contactObj);
     }
