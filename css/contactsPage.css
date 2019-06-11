@@ -12,12 +12,12 @@ body{
 }
 
 .websiteBanner{
-  background-image: url("../images/contact.png");
+  background-image: url("../images/contact.png"); /* Fix this in the morning*/
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: right; 
-  background: rgb(125,119,231);
-  background: linear-gradient(304deg, rgba(125,119,231,1) 0%, rgba(137,137,227,1) 53%, rgba(0,212,255,1) 100%);
+  background-position: right;
+  background-color: rgb(240,240,240);
+  background: linear-gradient(25deg, rgba(240,240,240,1) 0%, rgba(198,198,255,1) 100%);
 }
 
 .sbar {
