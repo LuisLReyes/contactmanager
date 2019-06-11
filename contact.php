@@ -20,16 +20,7 @@
     </head>
     <body> 
         <!--Begin page HTML here-->
-		<nav class="navbar navbar-expand-lg sticky-top navb">
-		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-			  <li class="nav-item">
-					<span class="nav-link" style="cursor:pointer" onclick="logout()">Logout</span>
-			  </li>
-			</ul>
-		  </div>
-		</nav>
-		
+			
         <div class="jumbotron jumbotron-fluid websiteBanner">
 		  <div class="container">
 			  <div class="col-2 float-right">
@@ -79,7 +70,15 @@
 		
 		<br>
 
-
+<nav class="navbar navbar-expand-lg sticky-top navb">
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item">
+					<span class="nav-link" style="cursor:pointer" onclick="logout()">Logout</span>
+			  </li>
+			</ul>
+		  </div>
+		</nav>
 
         <!--Imports for Jquery, popper, and Bootstreap's custom javascript-->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
