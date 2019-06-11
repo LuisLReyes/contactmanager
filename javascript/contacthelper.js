@@ -1,8 +1,9 @@
+var loggedInId;
 var contactData;
 //This runs when the page is loaded
 $(function(){
-    contactData = getContacts(1);
-    displayContacts(1);
+    contactData = getContacts(loggedInId);
+    displayContacts(loggedInId);
 });
 
 
@@ -118,7 +119,7 @@ function deleteContact(contactID){
         success : function(result){
             console.log("Contact Deleted");
             console.log(result);
-            displayContacts(1);
+            displayContacts(loggedInId);
             //Return result
             return result;
         },
@@ -210,7 +211,7 @@ function editHelper(contactId){
    var email = document.getElementById('email').value;
    var phone = document.getElementById('phone').value;
  	var address = document.getElementById('address').value;
-   var updateObj = {users_id : 1, first_name : fname, last_name : lname, phone_number : phone, address : address, email : email, id : contactId};
+   var updateObj = {users_id : loggedInId, first_name : fname, last_name : lname, phone_number : phone, address : address, email : email, id : contactId};
    updateObj = JSON.stringify(updateObj);
    updateContact(updateObj);
 }

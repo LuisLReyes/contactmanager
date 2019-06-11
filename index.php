@@ -1,0 +1,86 @@
+<?php 
+    session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--The name of the tab in the browser-->
+        <title>Contact Manager</title>
+
+        <!--Meta Tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--Bootstrap's CSS, make sure this is above all other stylesheets imported-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <!--Place your custom CSS import below this line-->
+        <link rel="stylesheet" href="css/login.css">
+        <!--<link rel="stylesheet" href="css/">-->
+
+    </head>
+    <body class="text-center">
+        <!--Begin page HTML here-->
+       <form class="form-signin" onsubmit="doLogin(); return false">
+          <h1 class="mb-3 font-weight-normal">Contact Manager</h1>
+          <label for="inputUserId" class ="sr-only">User ID</label>
+          <input type = "text" id ="inputUserId" class="form-control" placeholder="User ID">
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="inputPassword" class="form-control" placeholder="Password">
+          <div class="checkbox mb-3">
+            <input id = "togglePass" onclick="togglePassword()" type="checkbox" value="passVal"> <label for="checkbox">Show password</label>
+            <label id="loginResult"></label>
+          </div>
+          <button type="submit" id="loginBtn" class="btn btn-lg btn-primary btn-block" value="Submit">Login</button>
+          <a href="#" data-toggle="modal" data-target="#signUpPage" id="create">Create an account</a>
+          <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
+       </form>
+       <form class="form-create" onsubmit="doCreate(); return false">
+          <div class="modal fade" id="signUpPage" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+               <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Account Creation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+               <div class="modal-body">
+                 <label for="inputFirstName" class="sr-only">First Name</label>
+                 <input type="text"  id="signUpName" class="form-control" placeholder="First Name" required>
+                 <label for="inputUserId" class="sr-only">User ID</label>
+                 <input type="text"  id="signUpId" class="form-control" placeholder="Username" required>
+                 <label for="inputPassword" class="sr-only">Password</label>
+                 <input type="password" id="signUpPassword" class="form-control" placeholder="Password" minlength="10" required >
+                 <label for="emailAdd" class="sr-only">Email Address</label>
+                 <input type="email" id="emailAdd" class="form-control" placeholder="Email Address" required focus>
+                 <input id = "toggleSignPass" onclick="toggleSignUpPassword()" type="checkbox" value="signUpPassVal"><label for="showThePass">Show password</label>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                 <button type="submit" value="Submit" id ="create" class="btn btn-primary">Create Account</button>
+               </div>
+             </div>
+           </div>
+         </div>
+      </form>
+
+
+
+       </body>
+
+        <!--Imports for Jquery, popper, and Bootstreap's custom javascript-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!--Place your custom JavaScript import below this line-->
+        <script src="javascript/login.js"></script>
+        <script src="javascript/togglePassword.js"></script>
+        <script src="javascript/hashes.js"></script>
+        <script src="javascript/loginhelper.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js"></script>
+        <!--<script src="javascript/"></script>-->
+
+ </head>
+
+</html>
