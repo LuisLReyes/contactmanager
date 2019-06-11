@@ -20,7 +20,7 @@
     </head>
     <body class="bgblue"> 
         <!--Begin page HTML here-->
-		<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+		<nav class="navbar navbar-expand-lg sticky-top navb">
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 			  <li class="nav-item">
@@ -30,7 +30,7 @@
 		  </div>
 		</nav>
 		
-        <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron jumbotron-fluid websiteBanner">
 		  <div class="container">
 			<h1 class="display-4">Contact Manager</h1>
 			<p class="lead">Manage Your Contacts!</p>
