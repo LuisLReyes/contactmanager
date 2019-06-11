@@ -163,7 +163,12 @@ function editContact(contactId){
    var lname = $('#last_name'+contactId).text();
    var email = $('#email'+contactId).text();
    var phone = $('#phone_number'+contactId).text();
- 	var address = $('#address'+contactId).text();
+     var address = $('#address'+contactId).text();
+     console.log(fname);
+     console.log(lname);
+     console.log(email);
+     console.log(phone);
+     console.log(address);
    $('#'+contactId).remove();
    var row = '<tr class="table-info" id = '+contactId+'>' + '<td><input type="text" class="form-control" name="First Name" id="fname" value='+fname+'></td>' +
     '<td><input type="text" class="form-control" name="Last Name" id="lname" value='+lname+'></td>' +
