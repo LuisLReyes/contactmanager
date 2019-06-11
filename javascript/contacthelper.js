@@ -222,7 +222,8 @@ function contactSearch(){
     table = document.getElementById("contacttable");
     tr = table.getElementsByTagName("tr");
     
-    // Shamelessly sloppy search function for entire table
+    // Shamelessly sloppy and lazy search function for entire table
+    // Start at 1 to exclude header
     for(i=1; i < tr.length;i++){
         inRow=0;
         td = tr[i].getElementsByTagName("td")[0];
