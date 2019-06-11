@@ -16,7 +16,7 @@ function displayContacts(userID){
             console.log("Contacts Retrieved:");
             $("tbody").empty();
             result.data.forEach(contact =>  {
-                var row = '<tr class="table-light" id = '+contact.id+'><td id="first_name'+contact.id+'">'+JSON.stringify(contact.first_name).replace(/['"]+/g, '')+'</td>' +
+                var row = '<tr class="table-dark" id = '+contact.id+'><td id="first_name'+contact.id+'">'+JSON.stringify(contact.first_name).replace(/['"]+/g, '')+'</td>' +
                     '<td id="last_name'+contact.id+'">'+JSON.stringify(contact.last_name).replace(/['"]+/g, '')+'</td>' +
                     '<td id="email'+contact.id+'">'+JSON.stringify(contact.email).replace(/['"]+/g, '')+'</td>' +
                     '<td id="phone_number'+contact.id+'">'+JSON.stringify(contact.phone_number).replace(/['"]+/g, '') +'</td>' +
@@ -41,7 +41,7 @@ function displayContacts(userID){
     });
 
 
-    var row = '<tr class="table-light">' +
+    var row = '<tr class="table-dark">' +
 	      '<td><input type="text" class="form-control" name="First Name" id="fname"></td>' +
 	      '<td><input type="text" class="form-control" name="Last Name" id="lname"></td>' +
 	      '<td><input type="text" class="form-control" name="Email" id="email"></td>' +
@@ -164,7 +164,7 @@ function editContact(contactId){
    var phone = $('#phone_number'+contactId).text();
  	var address = $('#address'+contactId).text();
    $('#'+contactId).remove();
-   var row = '<tr id = '+contactId+'>' + '<td><input type="text" class="form-control" name="First Name" id="fname" value='+fname+'></td>' +
+   var row = '<tr class="table-dark" id = '+contactId+'>' + '<td><input type="text" class="form-control" name="First Name" id="fname" value='+fname+'></td>' +
     '<td><input type="text" class="form-control" name="Last Name" id="lname" value='+lname+'></td>' +
     '<td><input type="text" class="form-control" name="Email" id="email" value='+email+'></td>' +
     '<td><input type="text" class="form-control" name="Phone Number" id="phone" value='+phone+'></td>' +
@@ -250,7 +250,7 @@ function addRow(){
 
     // Fix this
           var index = $("table tbody tr:last-child").index();
-          var row = '<tr class="table-light" id="newRow">' +
+          var row = '<tr class="table-dark" id="newRow">' +
               '<td><input type="text" class="form-control" name="First Name" id="fname"></td>' +
               '<td><input type="text" class="form-control" name="Last Name" id="lname"></td>' +
               '<td><input type="text" class="form-control" name="Email" id="email"></td>' +
