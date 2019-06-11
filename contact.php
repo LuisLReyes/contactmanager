@@ -20,7 +20,7 @@
     </head>
     <body class="bgblue"> 
         <!--Begin page HTML here-->
-		<nav class="navbar navbar-expand-lg sticky-top navb">
+		<nav class="navbar navbar-expand-lg sticky-top websiteBanner">
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 			  <li class="nav-item">
@@ -52,10 +52,10 @@
 	<div class="container">
         <div class="table-wrapper">
 		<div class="row justify-content-between">
-			<div class="col-6">
+			<div class="col-6 float-left">
 				<input id="searchbar" class="sbar float-left" type="search" placeholder="Search Contacts" onkeyup="contactSearch()">
 			</div>
-			<div class="col-2">
+			<div class="col-2 float-right">
 				<button class="btn btn-primary my-2 my-sm-0 add-new float-right" onclick="addRow()" type="submit">Add Contact</button>
 			</div>
 			<table class="table table-bordered" id="contacttable">
