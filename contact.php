@@ -34,6 +34,9 @@
 		  <div class="container">
 			<h1 class="display-4">Contact Manager</h1>
 			<p class="lead">Manage Your Contacts!</p>
+		  <div class="col-2 float-right">
+			  <img src="../images/contact.png">
+			  </div>
 		  </div>
 		</div>
 		
