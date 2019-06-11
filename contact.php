@@ -87,6 +87,16 @@
 	<script src="javascript/contacthelper.js"></script>
 			<script>
 				loggedInId =<?php echo $_SESSION["id"];?>;
+
+				function logout(){
+						//Wipe the session and logout
+						<?php 
+							session_unset(); 
+							session_destroy(); 
+						?>
+						location = 'index.php';
+						
+				}
 				//alert(loggedInID);
 			</script>
     </body>
