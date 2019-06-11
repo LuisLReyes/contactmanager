@@ -90,7 +90,7 @@ function addContact(contactToAdd){
         success : function(result){
             console.log("Contacts Added");
             console.log(result);
-            displayContacts(1);
+            displayContacts(loggedInId);
 
             //Return message
             return result;
@@ -145,7 +145,7 @@ function updateContact(contactToEdit){
         success : function(result){
             console.log("Contacts Updated");
             console.log(result);
-            displayContacts(1);
+            displayContacts(loggedInId);
 
             //Return message
             return result;

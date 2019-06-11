@@ -92,7 +92,7 @@
 	<script src="javascript/contacthelper.js"></script>
 			<script>
 				loggedInId =<?php echo $_SESSION["id"];?>;
-				alert(loggedInID);
+				//alert(loggedInID);
 			</script>
     </body>
 </html>
