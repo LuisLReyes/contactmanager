@@ -3,21 +3,11 @@ body {
   height: 100%;
 }
 
-.bgblue{
+body{
   background-color: #373D5C;
 }
 
-.editButton{
-background-image: url("../images/cmedit.png")
-}
 
-.saveChangesButton{
-background-image: url("../images/cmcheck.png")
-}
-
-.deleteButton{
-background-image: url("../images/cmdelete.png")
-}
 
 .sbar {
     width: 70%;
