@@ -223,7 +223,7 @@ function contactSearch(){
     tr = table.getElementsByTagName("tr");
     
     // Shamelessly sloppy search function for entire table
-    for(i=0; i < tr.length;i++){
+    for(i=1; i < tr.length;i++){
         inRow=0;
         td = tr[i].getElementsByTagName("td")[0];
         if(td){
