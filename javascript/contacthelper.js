@@ -163,18 +163,13 @@ function editContact(contactId){
    var lname = $('#last_name'+contactId).text();
    var email = $('#email'+contactId).text();
    var phone = $('#phone_number'+contactId).text();
-     var address = $('#address'+contactId).text();
-     console.log(fname);
-     console.log(lname);
-     console.log(email);
-     console.log(phone);
-     console.log(address);
+    var address = $('#address'+contactId).text();
    $('#'+contactId).remove();
-   var row = '<tr class="table-info" id = '+contactId+'>' + '<td><input type="text" class="form-control" name="First Name" id="fname" value='+fname+'></td>' +
-    '<td><input type="text" class="form-control" name="Last Name" id="lname" value='+lname+'></td>' +
-    '<td><input type="text" class="form-control" name="Email" id="email" value='+email+'></td>' +
-    '<td><input type="text" class="form-control" name="Phone Number" id="phone" value='+phone+'></td>' +
-    '<td><input type="text" class="form-control" name="Address" id="address" value = '+address+'></td>' +
+   var row = '<tr class="table-info" id = '+contactId+'>' + '<td><input type="text" class="form-control" name="First Name" id="fname" value="'+fname+'"></td>' +
+    '<td><input type="text" class="form-control" name="Last Name" id="lname" value="'+lname+'"></td>' +
+    '<td><input type="text" class="form-control" name="Email" id="email" value="'+email+'"></td>' +
+    '<td><input type="text" class="form-control" name="Phone Number" id="phone" value="'+phone+'"></td>' +
+    '<td><input type="text" class="form-control" name="Address" id="address" value = "'+address+'"></td>' +
      '<td><button class="btn btn-success oi oi-check" onclick="editHelper('+contactId+')"></button></td>' +
     //'<td><span class="oi oi-circle-check" onclick="editHelper('+contactId+')"></span></td>' +
     '</tr>';
