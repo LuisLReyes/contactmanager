@@ -18,9 +18,9 @@
         <link rel="stylesheet" href="css/contactsPage.css">
                    
     </head>
-    <body class="bgblue"> 
+    <body> 
         <!--Begin page HTML here-->
-		<nav class="navbar navbar-expand-lg sticky-top websiteBanner">
+		<nav class="navbar navbar-expand-lg sticky-top navb">
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 			  <li class="nav-item">
