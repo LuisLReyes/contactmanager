@@ -8,7 +8,8 @@ body{
 }
 
 .navb{
-  background-color: #D8DDFA
+  background: rgb(240,240,240);
+  background: linear-gradient(4deg, rgba(240,240,240,1) 0%, rgba(240,240,240,0.1741071428571429) 100%);
 }
 
 .websiteBanner{
