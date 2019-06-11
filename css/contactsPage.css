@@ -7,6 +7,18 @@ body {
   background-color: #373D5C;
 }
 
+.editButton{
+background: images/cmedit.png
+}
+
+.saveChangesButton{
+background: images/cmcheck.png
+}
+
+.deleteButton{
+background: images/cmdelete.png
+}
+
 .sbar {
     width: 70%;
     height: calc(1.5em + .75rem + 2px);
