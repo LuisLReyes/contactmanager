@@ -250,7 +250,6 @@ function contactSearch(){
 
 function addRow(){
 
-    // Fix this
           var index = $("table tbody tr:last-child").index();
           var row = '<tr class="table-info" id="newRow">' +
               '<td><input type="text" class="form-control" name="First Name" id="fname"></td>' +
@@ -258,7 +257,8 @@ function addRow(){
               '<td><input type="text" class="form-control" name="Email" id="email"></td>' +
               '<td><input type="text" class="form-control" name="Phone Number" id="phone"></td>' +
               '<td><input type="text" class="form-control" name="Address" id="address"></td>' +
-                    '<td style="text-align:center"><span class="oi oi-circle-check" style="width:40%" onclick="saveContact()"></span><span class="oi oi-x" style="width:40%" onclick="removeRow()"></span></td>' +
+              '<td> <button class="btn btn-success oi oi-check" style="width:40%" onclick="saveContact()"></button><button class="btn btn-danger oi oi-trash" style="width:40%" onclick="removeRow()"></button></td>' +
+              //'<td style="text-align:center"><span class="oi oi-circle-check" style="width:40%" onclick="saveContact()"></span><span class="oi oi-x" style="width:40%" onclick="removeRow()"></span></td>' +
           '</tr>';
         $("table").prepend(row);
 
