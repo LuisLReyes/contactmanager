@@ -12,10 +12,6 @@ body{
 }
 
 .websiteBanner{
-  background-image: url("../images/contact.png"); /* Fix this in the morning*/
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: right;
   background-color: rgb(240,240,240);
   background: linear-gradient(25deg, rgba(240,240,240,1) 0%, rgba(198,198,255,1) 100%);
 }
