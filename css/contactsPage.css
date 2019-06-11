@@ -8,15 +8,15 @@ body {
 }
 
 .editButton{
-background: images/cmedit.png
+background-image: url("../images/cmedit.png")
 }
 
 .saveChangesButton{
-background: images/cmcheck.png
+background-image: url("../images/cmcheck.png")
 }
 
 .deleteButton{
-background: images/cmdelete.png
+background-image: url("../images/cmdelete.png")
 }
 
 .sbar {
