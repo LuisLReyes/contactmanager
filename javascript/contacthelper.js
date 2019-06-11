@@ -221,7 +221,8 @@ function contactSearch(){
     filter = input.value.toUpperCase();
     table = document.getElementById("contacttable");
     tr = table.getElementsByTagName("tr");
-
+    
+    // Shamelessly sloppy search function for entire table
     for(i=0; i < tr.length;i++){
         inRow=0;
         td = tr[i].getElementsByTagName("td")[0];
@@ -229,10 +230,6 @@ function contactSearch(){
             value = td.textContent || td.innerText;
             if(value.toUpperCase().indexOf(filter) > -1){
                 inRow = 1;
-                //tr[i].style.display = "";
-            }
-            else{
-                //tr[i].style.display = "none";
             }
         }
         td = tr[i].getElementsByTagName("td")[1];
@@ -240,10 +237,6 @@ function contactSearch(){
             value = td.textContent || td.innerText;
             if(value.toUpperCase().indexOf(filter) > -1){
                 inRow = 1;
-                //tr[i].style.display = "";
-            }
-            else{
-                //tr[i].style.display = "none";
             }
         }
         td = tr[i].getElementsByTagName("td")[2];
@@ -251,10 +244,6 @@ function contactSearch(){
             value = td.textContent || td.innerText;
             if(value.toUpperCase().indexOf(filter) > -1){
                 inRow = 1;
-                //tr[i].style.display = "";
-            }
-            else{
-                //tr[i].style.display = "none";
             }
         }
         td = tr[i].getElementsByTagName("td")[3];
@@ -262,10 +251,6 @@ function contactSearch(){
             value = td.textContent || td.innerText;
             if(value.toUpperCase().indexOf(filter) > -1){
                 inRow = 1;
-                //tr[i].style.display = "";
-            }
-            else{
-                //tr[i].style.display = "none";
             }
         }
         td = tr[i].getElementsByTagName("td")[4];
@@ -273,10 +258,6 @@ function contactSearch(){
             value = td.textContent || td.innerText;
             if(value.toUpperCase().indexOf(filter) > -1){
                 inRow = 1;
-                //tr[i].style.display = "";
-            }
-            else{
-                //tr[i].style.display = "none";
             }
         }
         if(inRow){
